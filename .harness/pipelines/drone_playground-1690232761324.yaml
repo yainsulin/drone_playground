@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_drone_playground_1690232766785
+  name: Build drone_playground
+  orgIdentifier: default
+  projectIdentifier: k
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1690232756418
+        repoName: yainsulin/drone_playground
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
