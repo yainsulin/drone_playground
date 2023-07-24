@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_drone_playground_1690232766785-pr-trigger-input-set
+  identifier: Build_drone_playground_1690232766785prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: k
+  pipeline:
+    identifier: Build_drone_playground_1690232766785
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
